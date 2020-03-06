@@ -1,7 +1,7 @@
-FROM alpine:3.2
-MAINTAINER Cagatay Gurturk <cguertuerk@ebay.de>
+FROM alpine:3.11.3
+MAINTAINER Ruinscraft
 
-RUN apk add --update openssh-client && rm -rf /var/cache/apk/*
+RUN apk add --update --no-cache openssh-client
 
 CMD rm -rf /root/.ssh && mkdir /root/.ssh && cp -R /root/ssh/* /root/.ssh/ && chmod -R 600 /root/.ssh/* && \
 ssh \

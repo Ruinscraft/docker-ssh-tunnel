@@ -1,5 +1,3 @@
-[![](https://images.microbadger.com/badges/image/cagataygurturk/docker-ssh-tunnel.svg)](https://microbadger.com/images/cagataygurturk/docker-ssh-tunnel)
-
 # Docker SSH Tunnel
 
 This Docker creates a simple SSH tunnel over a server. It is very useful when your container needs to access to an external protected resource. In this case this container might behave like a proxy to outer space inside your Docker network.
@@ -30,7 +28,7 @@ This Docker creates a simple SSH tunnel over a server. It is very useful when yo
     version: '2'
     services:
       mysql:
-        image: cagataygurturk/docker-ssh-tunnel:0.0.1
+        image: Ruinscraft/docker-ssh-tunnel:0.0.1
         volumes:
           - $HOME/.ssh:/root/ssh:ro
         environment:
